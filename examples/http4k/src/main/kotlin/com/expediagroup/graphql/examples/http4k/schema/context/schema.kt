@@ -50,11 +50,13 @@ class UserDbHandler : GraphQLWithContextHandler<String> {
     ).build()
 
     private val dataLoaderRegistry = DataLoaderRegistry().apply {
-        register("USER_LOADER", DataLoader { ids: List<Long> ->
-            supplyAsync {
-                UserQueries().search(Params(ids))
-            }
-        })
+        register(
+            "USER_LOADER",
+            DataLoader { ids: List<Long> ->
+                supplyAsync {
+                    UserQueries().search(Params(ids))
+                }
+            })
     }
 
     override fun invoke(request: GraphQLRequest, context: String) = GraphQLResponse.from(

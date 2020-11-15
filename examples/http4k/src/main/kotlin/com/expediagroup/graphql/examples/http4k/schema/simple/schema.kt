@@ -50,11 +50,13 @@ class BookDbHandler : GraphQLHandler {
     ).build()
 
     private val dataLoaderRegistry = DataLoaderRegistry().apply {
-        register("BOOK_LOADER", DataLoader { ids: List<Long> ->
-            supplyAsync {
-                BookQueries().search(Params(ids))
-            }
-        })
+        register(
+            "BOOK_LOADER",
+            DataLoader { ids: List<Long> ->
+                supplyAsync {
+                    BookQueries().search(Params(ids))
+                }
+            })
     }
 
     override fun invoke(request: GraphQLRequest) = GraphQLResponse.from(
