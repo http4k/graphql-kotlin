@@ -56,7 +56,8 @@ class BookDbHandler : GraphQLHandler {
                 supplyAsync {
                     BookQueries().search(Params(ids))
                 }
-            })
+            }
+        )
     }
 
     override fun invoke(request: GraphQLRequest) = GraphQLResponse.from(

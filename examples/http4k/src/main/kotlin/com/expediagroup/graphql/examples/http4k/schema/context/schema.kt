@@ -56,7 +56,8 @@ class UserDbHandler : GraphQLWithContextHandler<String> {
                 supplyAsync {
                     UserQueries().search(Params(ids))
                 }
-            })
+            }
+        )
     }
 
     override fun invoke(request: GraphQLRequest, context: String) = GraphQLResponse.from(
