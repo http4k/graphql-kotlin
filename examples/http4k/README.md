@@ -23,49 +23,37 @@ cd /path/to/graphql-kotlin/examples
 #### Simple
 Once the app has started you can explore the example schema by opening Playground endpoint at: [http://localhost:5000/graphql/book]
 
-You can use the following example query to view several of the related models:
+You can use the following example queries to view:
 ```graphql
 query {
   search(params: { ids: [1,2,3] }) {
     id
     name
-    books {
-      title
-    }
-    university {
-      id
-      name
-    }
   }
-
-  searchUniversities(params: { ids: [1]}) {
-    id
-    name
-  }
+}
+```
+... or mutate:
+```graphql
+mutation {
+  delete(params: { ids: [1] })
 }
 ```
 
 #### Contextual
 Once the app has started you can explore the example schema by opening Playground endpoint at: [http://localhost:5000/graphql/user]
 
-You can use the following example query to view several of the related models:
+You can use the following example queries to view:
 ```graphql
 query {
   search(params: { ids: [1,2,3] }) {
     id
     name
-    books {
-      title
-    }
-    university {
-      id
-      name
-    }
   }
-
-  searchUniversities(params: { ids: [1]}) {
-    id
-    name
-  }
+}
+```
+... or mutate:
+```graphql
+mutation {
+  delete(params: { ids: [1] })
 }
 ```
