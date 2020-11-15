@@ -1,6 +1,5 @@
 package com.expediagroup.graphql.examples.http4k.schema.context
 
-
 import com.expediagroup.graphql.SchemaGeneratorConfig
 import com.expediagroup.graphql.TopLevelObject
 import com.expediagroup.graphql.toSchema
