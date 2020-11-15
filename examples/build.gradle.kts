@@ -19,7 +19,6 @@ allprojects {
         mavenLocal()
         jcenter()
         mavenCentral()
-        maven("https://dl.bintray.com/http4k/maven") // TEMPORARY
     }
 }
 
