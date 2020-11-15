@@ -9,8 +9,8 @@ application {
 }
 
 dependencies {
-    implementation(platform("org.http4k:http4k-bom:3.275.0"))
+    implementation(platform("org.http4k:http4k-bom:3.276.0"))
     implementation("org.http4k:http4k-core")
-    implementation("org.http4k:http4k-format-jackson")
+    implementation("org.http4k:http4k-graphql")
     implementation("com.expediagroup", "graphql-kotlin-schema-generator")
 }

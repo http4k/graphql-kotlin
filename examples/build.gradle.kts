@@ -1,4 +1,3 @@
-import io.gitlab.arturbosch.detekt.detekt
 import java.util.Properties
 
 plugins {
@@ -20,6 +19,7 @@ allprojects {
         mavenLocal()
         jcenter()
         mavenCentral()
+        maven("https://dl.bintray.com/http4k/maven") // TEMPORARY
     }
 }
 
